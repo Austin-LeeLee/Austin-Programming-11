@@ -1,10 +1,11 @@
 public class Teacher {
 
+    //(Full Name, Subject)
     private String first_Name;
     private String last_Name;
     private String subject;
 
-//Getters
+    //Getters
 
     public String getFirst_Name() {
         return first_Name;
@@ -39,8 +40,6 @@ public class Teacher {
         subject = "";
     }
 
-
-
     public Teacher(String first_Name, String last_Name, String subject) {
 
         this.first_Name = first_Name;
@@ -48,7 +47,7 @@ public class Teacher {
         this.subject = subject;
     }
 
-    //output
+    //Add Teachers to List
     public String toString() {
         return "Name: " + first_Name + " " + last_Name +
                 "   Subject:" + subject;

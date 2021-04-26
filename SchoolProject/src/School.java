@@ -1,32 +1,54 @@
 import java.util.ArrayList;
 
 
-//There's literally nothing to add to school class as my main class has it all. I don't understand why you want me to add a school class
+//Students,Teachers,Courses
+
 public class School {
     ArrayList<Teacher> teachers = new ArrayList<>();
     ArrayList<Student> students = new ArrayList<>();
 
+    private String student;
+    private String teacher;
     private String course;
 
-
-    public School(String course) {
+    public School(String student, String teacher, String course) {
+        this.student = student;
+        this.teacher = teacher;
         this.course = course;
-    }
 
-    public String getCourse() {
-        return course;
-    }
-
-    public void setCourse(String course) {
-        this.course = course;
     }
 
     public School() {
 
     }
 
+    //Getter and Setters
+    public String getStudent() {
+        return student;
+    }
+
+    public void setStudent(String student) {
+        this.student = student;
+    }
+
+    public String getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(String teacher) {
+        this.teacher = teacher;
+    }
+
+    public String getCourses() {
+        return course;
+    }
+
+    public void setCourses(String courses) {
+        course = courses;
+    }
+
     //output
     public String toString() {
-        return course;
+        return student + teacher + course;
     }
 }

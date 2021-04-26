@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Student {
 
-    //(full Name, Grade, Student id, course)
+    //(Full Name, Grade, Student id, Course)
     private String firstName;
     private String lastName;
     private int grade;
