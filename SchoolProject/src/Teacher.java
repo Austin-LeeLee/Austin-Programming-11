@@ -48,6 +48,7 @@ public class Teacher {
         this.subject = subject;
     }
 
+    //output
     public String toString() {
         return "Name: " + first_Name + " " + last_Name +
                 "   Subject:" + subject;
