@@ -1,14 +1,12 @@
 package sample;
 public class Game {
 
-    int firstRoll, finalRoll;
-
     int diceSides, top;
 
     int bets;
     String confirm;
 
-    int Win, Lose;
+    int Win = 0, Loss = 0;
 
     int Dice1, Dice2;
 
@@ -39,21 +37,22 @@ public class Game {
     }
 
     public int getWin() {
-        Win++;
-        return Win;
+
+        if (Dice1 > Dice2)
+            Win = Win + 1;
+        return Win ;
     }
 
-    public int getLose() {
-        Lose++;
-        return Lose;
+    public int getLoss() {
+        if (Dice1 < Dice2)
+            Loss = Loss + 1;
+        return Loss ;
     }
 
-    public int getTie(){
-        if (firstRoll == finalRoll){
-
-            Lose++;
-        }
-        return Lose;
+    public int getTie() {
+        if (Dice1 == Dice2)
+            Loss = Loss + 1;
+        return Loss ;
     }
 
     public int getDice1(){
@@ -63,7 +62,6 @@ public class Game {
     public int getDice2(){
         return Dice2;
     }
-
 
     public String toString () {return ("|You|");
     }
