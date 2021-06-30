@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <TabPane prefHeight="546.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Game">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="492.0" prefWidth="632.0">
+                            <children>
+                                <HBox alignment="CENTER" layoutX="265.0" layoutY="14.0" prefHeight="42.0" prefWidth="200.0">
+                                    <children>
+                                        <Label text="Game Of Chance">
+                                            <font>
+                                                <Font size="24.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <BorderPane layoutY="56.0" prefHeight="296.0" prefWidth="730.0">
+                                    <top>
+                                        <HBox alignment="CENTER" prefHeight="58.0" prefWidth="600.0" spacing="20.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Label text="Bets: " />
+                                                <TextField fx:id="textGetBet" promptText="Insert Amount" />
+                                                <Button fx:id="btnGetConfirmation" mnemonicParsing="false" onAction="#AddConfirmation" text="Confirm" />
+                                            </children>
+                                        </HBox>
+                                    </top>
+                                    <left>
+                                        <VBox alignment="TOP_CENTER" prefHeight="138.0" prefWidth="221.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Label text="| You | " />
+                                                <GridPane alignment="CENTER">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <Label prefHeight="18.0" prefWidth="131.0" text="      Second Roll:" GridPane.rowIndex="2" />
+                                                        <Label prefHeight="18.0" prefWidth="129.0" text="           First Roll:" GridPane.rowIndex="1" />
+                                                        <TextField fx:id="GetFirstRoll" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                        <TextField fx:id="GetSecondRoll" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                    </children>
+                                                </GridPane>
+                                            </children>
+                                        </VBox>
+                                    </left>
+                                    <bottom>
+                                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="TOP_RIGHT">
+                                            <children>
+                                                <Button fx:id="btnRoll" mnemonicParsing="false" onAction="#AddRoll" prefHeight="26.0" prefWidth="157.0" text="Roll" />
+                                                <Button fx:id="btnClear" layoutX="296.0" layoutY="10.0" mnemonicParsing="false" onAction="#AddClear" prefHeight="26.0" prefWidth="157.0" text="End Game" />
+                                            </children>
+                                        </HBox>
+                                    </bottom>
+                                    <right>
+                                        <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="138.0" prefWidth="404.0" spacing="20.0" BorderPane.alignment="BOTTOM_LEFT">
+                                            <children>
+                                                <Label text="Rule" />
+                                                <TextArea prefHeight="49.0" prefWidth="370.0" text="To save match history, the player must insert the amount they wager. Roll the dice by pressing the &quot;Roll&quot; button. Head to match history once both dice have been thrown, then click &quot;| You |&quot;. There, you can view the match result by pressing the “Result” button." />
+                                            </children></VBox>
+                                    </right>
+                                </BorderPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Match History">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="291.0" layoutY="14.0" text="Match History">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <ListView fx:id="resultList" layoutX="41.0" layoutY="65.0" onMouseClicked="#DisplayList" prefHeight="110.0" prefWidth="200.0" />
+                                <GridPane layoutX="324.0" layoutY="75.0" prefHeight="91.0" prefWidth="238.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.20001220703125" minWidth="10.0" prefWidth="163.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.4000244140625" minWidth="10.0" prefWidth="75.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Game Won:" />
+                                        <Label text="Game Lost:" GridPane.rowIndex="1" />
+                                        <Label prefHeight="18.0" prefWidth="170.0" text="\$ Bet Per Game: " GridPane.rowIndex="2" />
+                                        <Label fx:id="gameWon" GridPane.columnIndex="1" />
+                                        <Label fx:id="gameLost" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                        <Label fx:id="moneyBet" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    </children>
+                                </GridPane>
+                                <Button fx:id="btnGetResult" layoutX="623.0" layoutY="138.0" mnemonicParsing="false" onAction="#gameResult" text="Result" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>
