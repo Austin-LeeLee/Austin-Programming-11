@@ -1,0 +1,23 @@
+The List of the Pre-Added Friends in 'FriendGroup2':
+
+					Name: Stephanie Walker
+					Age : 27
+					Gender: Female
+					telephone number: 604-205-6827
+
+
+
+					Name: Evelyn Fisher
+					Age : 35
+					Gender: Female
+					telephone number: 604-205-8620
+
+
+
+					Name: Alan Walker
+                    Age : 23
+                    Gender: Male
+                    telephone number: 778-200-0441
+
+
+Friends Manually added to 'FriendGroup2':

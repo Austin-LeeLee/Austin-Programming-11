@@ -1,0 +1,22 @@
+The List of the Pre-Added Friends in 'FriendGroup3':
+
+					Name: Steve Smith
+					Age :16
+					Gender: Male
+					telephone number: 604-205-7859
+
+
+
+					Name: Emma Nguyen
+					Age : 29
+					Gender: Female
+					telephone number: 778-262-1056
+
+
+
+					Name: Austin Chan
+                    Age : 31
+                    Gender: Male
+                    telephone number: 604-225-8077
+
+Friends Manually added to 'FriendGroup3':
