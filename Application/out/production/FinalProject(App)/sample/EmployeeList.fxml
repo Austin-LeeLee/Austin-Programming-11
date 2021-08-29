@@ -50,7 +50,7 @@
          <Label layoutX="459.0" layoutY="271.0" text="Email Address" textFill="WHITE" />
          <TextField fx:id="emailAddress" editable="false" layoutX="459.0" layoutY="289.0" prefHeight="26.0" prefWidth="134.0" />
          <Label layoutX="291.0" layoutY="271.0" text="ID Number" textFill="WHITE" />
-         <ComboBox fx:id="listComboBox" blendMode="ADD" layoutX="124.0" layoutY="54.0" onAction="#getData_comboBox" prefWidth="144.0" visibleRowCount="20" />
+         <ComboBox fx:id="listComboBox" blendMode="ADD" layoutX="124.0" layoutY="54.0"  prefWidth="144.0" visibleRowCount="20" />
        </AnchorPane>
    </bottom>
 </BorderPane>

@@ -6,13 +6,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.TextFieldListCell;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
 
-public class ListOfEmployees{
+public class ListOfEmployees {
 
     @FXML
     public Button logout;
@@ -60,6 +56,7 @@ public class ListOfEmployees{
         listView.getSelectionModel().getSelectedItem();
 
     }
+
     public void userLogOut() throws IOException {
         Main m = new Main();
         m.changeScene("login.fxml");
@@ -80,11 +77,8 @@ public class ListOfEmployees{
     public void viewEmployeeList() {
 
         //Items not showing up
-       listComboBox.setValue("List");
-       listComboBox.getItems().add((String.valueOf(Employee.getName())));
-
-
-
+        listComboBox.setValue("List");
+        listComboBox.getItems().add((String.valueOf(Employee.getName())));
 
 
         name.setText(Employee.getName());
@@ -118,25 +112,7 @@ public class ListOfEmployees{
             listView.getItems().remove(index);
         }
     }
-
-    public String[] getData_comboBox() {
-
-            ArrayList<String> arr = new ArrayList<>();
-            try {
-                FileInputStream fis = new FileInputStream("DataPersistence.txt");
-                BufferedReader br = new BufferedReader(new InputStreamReader(fis));
-                String strLine;
-                while ((strLine = br.readLine()) != null) {
-                    arr.add(strLine);
-                }
-                br.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return arr.toArray(new String[0]);
-        }
 }
-
 
 
 
