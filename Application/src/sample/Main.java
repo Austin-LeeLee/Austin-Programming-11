@@ -10,7 +10,9 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class Main extends Application {
+
     private static Stage stg;
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         stg = primaryStage;
@@ -19,7 +21,6 @@ public class Main extends Application {
         primaryStage.setTitle("Application");
         primaryStage.setScene(new Scene(root, 600, 350));
         primaryStage.show();
-
     }
 
     public void changeScene(String fxml) throws IOException {
@@ -27,8 +28,8 @@ public class Main extends Application {
         stg.getScene().setRoot(pane);
     }
 
-
-    public static void main(String[] args){
-        launch(args);
+    public static void main(String[] args) {
+            launch(args);
     }
 }
+

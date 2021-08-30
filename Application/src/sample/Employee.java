@@ -1,84 +1,63 @@
 package sample;
 
-import javafx.collections.ObservableList;
-
-import java.io.*;
-import java.util.Random;
-
-
-public class Employee extends AfterLogin {
-
-    static String employerName;
-    static String employerBirthdate;
-    static ObservableList<String> employerGender;
-    static int employerSIN;
-    static String employerStartDate;
-    static String employerEmailAddress;
-    static int employerID;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.concurrent.ThreadLocalRandom;
 
 
-    public Employee(String employerName, String employerBirthdate, ObservableList<String> employerGender, int employerSIN, String employerStartDate, String employerEmailAddress) {
-        Employee.employerName = String.valueOf(employerName);
-        Employee.employerBirthdate = String.valueOf(employerBirthdate);
-        Employee.employerGender = (employerGender);
-        Employee.employerSIN = (employerSIN);
-        Employee.employerStartDate = String.valueOf(employerStartDate);
-        Employee.employerEmailAddress = String.valueOf(employerEmailAddress);
+public class Employee  {
+
+    static String employeeName;
+    static String employeeBirthdate;
+    static String employeeGender;
+    static String employerSIN;
+    static String employeeStartDate;
+    static String employeeEmailAddress;
+    static int employeeID;
+
+
+    public Employee(String employerName, String employeeBirthdate, String employerGender, String employerSIN, String employerStartDate, String employerEmailAddress) {
+        Employee.employeeName = (employerName);
+        Employee.employeeBirthdate = String.valueOf(employeeBirthdate);
+        Employee.employeeGender = (employerGender);
+        Employee.employerSIN = String.valueOf((employerSIN));
+        Employee.employeeStartDate = String.valueOf(employerStartDate);
+        Employee.employeeEmailAddress = String.valueOf(employerEmailAddress);
     }
-
 
     public Employee() {
 
     }
-
-
-    public static String getName() {
-        return employerName;
-    }
-
-    public static String getBirthDate() {
-        return employerBirthdate;
-    }
-
-    public static ObservableList<String> getGender() {
-
-
-        return employerGender;
-    }
-
-    public static String getEmailAddress() {
-        return employerEmailAddress;
-    }
-
-    public static int getSIN() {
-        return employerSIN;
-    }
-
-    public static String getStartDate() {
-        return employerStartDate;
-    }
-
     public static int getID() {
 
-        Random rand = new Random();
-        employerID = rand.nextInt(999999999);
+        employeeID = ThreadLocalRandom.current().nextInt(100000000, 999999999);
+        return employeeID;
+    }
 
-        return employerID;
+    public static String getName() {
+        return employeeName;
     }
 
     public void writeToTxt() throws IOException {
 
+        /* Saves employee's Name, Gender, Birthdate,
+          SIN Number, Employment Start Date, Email Address,
+          and an uniquely Generated Employee ID
+        */
         FileWriter fileWriter = new FileWriter("DataPersistence.txt", true);
         BufferedWriter writer = new BufferedWriter(fileWriter);
-        writer.write("\t\t\t\t\t Name: " + employerName + "\r");
-        writer.write("\t\t\t\t\t Gender: " + employerGender + "\r");
-        writer.write("\t\t\t\t\t Birthdate: " + employerBirthdate + "\r");
+        writer.write("\t\t\t\t\t Name: " + employeeName + "\r");
+        writer.write("\t\t\t\t\t Gender: " + employeeGender + "\r");
+        writer.write("\t\t\t\t\t Birthdate: " + employeeBirthdate + "\r");
         writer.write("\t\t\t\t\t SIN Number: " + employerSIN + "\r");
-        writer.write("\t\t\t\t\t Employment Start Date: " + employerStartDate + "\r");
-        writer.write("\t\t\t\t\t Email Address: " + employerEmailAddress + "\r");
-        writer.write("\t\t\t\t\t Uniquely Generated Personal ID: " + employerID + "\r");
+        writer.write("\t\t\t\t\t Employment Start Date: " + employeeStartDate + "\r");
+        writer.write("\t\t\t\t\t Email Address: " + employeeEmailAddress + "\r");
+        writer.write("\t\t\t\t\t Uniquely Generated Employee ID: " + getID() + "\r");
         writer.write("\r");
-        System.out.println(employerID);
+        //Test if employee ID in output matches employee ID in txt file
+        System.out.println(employeeID);
+        //Close write to file
         writer.close();
 
 

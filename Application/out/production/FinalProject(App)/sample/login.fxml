@@ -13,53 +13,53 @@
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" style="-fx-background-image: #06093A;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginController">
    <left>
       <AnchorPane prefHeight="381.0" prefWidth="228.0" style="-fx-background-color: #f8b195;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="204.0" fitWidth="186.0" layoutX="21.0" layoutY="132.0" pickOnBounds="true">
-               <image>
-                  <Image url="@../image/omen triggered.gif" />
-               </image>
-            </ImageView>
-            <Label layoutX="34.0" layoutY="78.0" prefHeight="18.0" prefWidth="169.0" text="Password: 123" textFill="#6c5b7b" />
-            <Label layoutX="33.0" layoutY="35.0" prefHeight="18.0" prefWidth="179.0" text="Username: 1" textFill="#6c5b7b" />
-         </children>
+         <ImageView fitHeight="204.0" fitWidth="186.0" layoutX="21.0" layoutY="132.0" pickOnBounds="true">
+            <Image url="@../image/omen triggered.gif" />
+         </ImageView>
+         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="14.0" prefHeight="51.0" prefWidth="184.0" text="Username: 1" textFill="#34495e">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="63.0" prefHeight="51.0" prefWidth="184.0" text="Password: 123" textFill="#34495e">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
       </AnchorPane>
    </left>
    <right>
-      <AnchorPane prefHeight="400.0" prefWidth="520.0" style="-fx-background-color: #355C7D;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fx:id="lockimageView" fitHeight="74.0" fitWidth="67.0" layoutX="151.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/grey_lock_icon.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="51.0" layoutY="203.0" text="Password" textFill="WHITE">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="Username" layoutX="119.0" layoutY="130.0" prefHeight="26.0" prefWidth="198.0" promptText="Username" />
-            <Label layoutX="50.0" layoutY="133.0" prefWidth="58.0" text="Username" textFill="WHITE">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <Button fx:id="UserLogin" layoutX="51.0" layoutY="263.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="30.0" prefWidth="266.0" style="-fx-background-color: #34495E;" text="Login" textFill="WHITE">
-               <font>
-                  <Font size= "13.0" />
-               </font>
-            </Button>
-            <Button fx:id="cancelButton" layoutX="51.0" layoutY="305.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="30.0" prefWidth="266.0" style="-fx-background-color: #34495E;" text="Cancel" textFill="WHITE">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-            <Label fx:id="WrongLogin" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="23.0" layoutY="236.0" prefHeight="19.0" prefWidth="297.0" textFill="#f22424">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <PasswordField fx:id="Password" layoutX="119.0" layoutY="198.0" prefHeight="26.0" prefWidth="198.0" promptText="Password" />
-         </children>
+      <AnchorPane prefHeight="400.0" prefWidth="520.0" style="-fx-background-color: #34495E;" BorderPane.alignment="CENTER">
+         <ImageView fitHeight="74.0" fitWidth="67.0" layoutX="151.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../image/grey_lock_icon.png" />
+         </ImageView>
+         <Label layoutX="51.0" layoutY="203.0" text="Password" textFill="WHITE">
+            <font>
+               <Font size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="Username" layoutX="119.0" layoutY="130.0" prefHeight="26.0" prefWidth="198.0" promptText="Username" />
+         <Label layoutX="50.0" layoutY="133.0" prefWidth="58.0" text="Username" textFill="WHITE">
+            <font>
+               <Font size="13.0" />
+            </font>
+         </Label>
+         <Button fx:id="UserLogin" layoutX="51.0" layoutY="263.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="30.0" prefWidth="266.0" style="-fx-background-color: f5f0e1;" text="Login">
+            <font>
+               <Font size="13.0" />
+            </font>
+         </Button>
+         <Button fx:id="cancelButton" layoutX="51.0" layoutY="305.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="30.0" prefWidth="266.0" style="-fx-background-color: f5f0e1;" text="Cancel">
+            <font>
+               <Font size="13.0" />
+            </font>
+         </Button>
+         <Label fx:id="WrongLogin" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="5.0" layoutX="35.0" layoutY="235.0" prefHeight="19.0" prefWidth="297.0" textFill="RED">
+            <font>
+               <Font size="13.0" />
+            </font>
+         </Label>
+         <PasswordField fx:id="Password" layoutX="119.0" layoutY="198.0" prefHeight="26.0" prefWidth="198.0" promptText="Password" />
       </AnchorPane>
    </right>
 </BorderPane>

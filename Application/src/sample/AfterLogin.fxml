@@ -22,33 +22,38 @@
                </cursor>
                <Image url="@../image/logo.jpeg" />
             </ImageView>
-            <Label alignment="CENTER" layoutX="179.0" layoutY="14.0" prefHeight="42.0" prefWidth="344.0" text="Employee Management System" textFill="WHITE">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
             <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="354.0" prefWidth="94.0" style="-fx-background-image: #262620;">
                <ImageView fitHeight="372.0" fitWidth="109.0" layoutX="-15.0" layoutY="-18.0" pickOnBounds="true">
                   <Image url="@../image/dark-gradient-blue (2).png" />
                </ImageView>
-               <Button fx:id="logout" alignment="CENTER" layoutY="303.0" mnemonicParsing="false" onAction="#userLogOut" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: #262620;" text="Log Out" textFill="WHITE" />
-               <Button fx:id="list" alignment="CENTER" layoutY="261.0" mnemonicParsing="false" onAction="#EmployeeList" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: #262620;" text="Employee List" textFill="WHITE" />
-               <Button fx:id="save" alignment="CENTER" layoutY="219.0" mnemonicParsing="false" onAction="#saveBtn" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: #262620;" text="Save Info" textFill="WHITE" />
-               <Button fx:id="create" alignment="CENTER" layoutY="177.0" mnemonicParsing="false" onAction="#createBtn" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: #262620;" text="Add" textFill="WHITE" />
+               <Button fx:id="logOut" alignment="CENTER" layoutY="303.0" mnemonicParsing="false" onAction="#userLogOut" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: #262620;" text="Log Out" textFill="WHITE" />
+               <Button fx:id="saveInfo" alignment="CENTER" contentDisplay="RIGHT" layoutY="219.0" mnemonicParsing="false" onAction="#saveBtn" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: #262620;" text="Save Employee" textFill="WHITE">
+                  <font>
+                     <Font size="11.0" />
+                  </font></Button>
+               <Button fx:id="loadList" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="261.0" mnemonicParsing="false" onAction="#loadEmployeeList" prefHeight="43.0" prefWidth="89.0" style="-fx-background-color: #262620;" text="Load Txt File" textFill="WHITE" />
             </AnchorPane>
-            <Label layoutX="200.0" layoutY="89.0" text="Full Name" textFill="WHITE" />
+            <Label layoutX="200.0" layoutY="89.0" text="Employee Full Name" textFill="WHITE" />
             <Label layoutX="200.0" layoutY="146.0" text="Birthdate" textFill="WHITE" />
-            <TextField fx:id="addName" layoutX="200.0" layoutY="107.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Full Name" />
-            <TextField fx:id="addBirthDate" layoutX="200.0" layoutY="164.0" prefHeight="26.0" prefWidth="134.0" promptText="Date/Month/Year" />
+            <TextField fx:id="addName" layoutX="200.0" layoutY="107.0" prefHeight="26.0" prefWidth="308.0" promptText="First Name Last Name">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></TextField>
+            <TextField fx:id="addBirthDate" layoutX="200.0" layoutY="164.0" prefHeight="26.0" prefWidth="134.0" promptText="DD/MM/YYYY" />
             <Label layoutX="374.0" layoutY="146.0" text="Gender" textFill="WHITE" />
             <Label layoutX="374.0" layoutY="195.0" text="Employment Start Date" textFill="WHITE" />
-            <Label fx:id="WrongInfo" alignment="CENTER" layoutX="197.0" layoutY="305.0" prefHeight="18.0" prefWidth="314.0" textFill="#ff4a4a" />
-            <TextField fx:id="addSIN" layoutX="200.0" layoutY="213.0" prefHeight="26.0" prefWidth="134.0" promptText="SIN Number " />
-            <TextField fx:id="addStartDate" layoutX="374.0" layoutY="213.0" prefHeight="26.0" prefWidth="134.0" promptText="Date/Month/Year" />
+            <Label fx:id="WrongInfo" alignment="CENTER" layoutX="197.0" layoutY="305.0" prefHeight="18.0" prefWidth="314.0" textFill="WHITE" />
+            <TextField fx:id="addSIN" layoutX="200.0" layoutY="213.0" prefHeight="26.0" prefWidth="134.0" promptText="XXX XXX XXX" />
+            <TextField fx:id="addStartDate" layoutX="374.0" layoutY="213.0" prefHeight="26.0" prefWidth="134.0" promptText="DD/MM/YYYY" />
             <Label layoutX="200.0" layoutY="246.0" text="Email" textFill="WHITE" />
             <Label layoutX="200.0" layoutY="195.0" text="SIN Number" textFill="WHITE" />
             <TextField fx:id="AddEmailAddress" layoutX="200.0" layoutY="264.0" prefHeight="26.0" prefWidth="308.0" promptText="Enter Email Address" />
             <ComboBox fx:id="SelectGender" blendMode="ADD" layoutX="374.0" layoutY="164.0" prefHeight="26.0" prefWidth="134.0" promptText="Select Gender" />
+            <Label alignment="CENTER" layoutX="179.0" layoutY="29.0" prefHeight="42.0" prefWidth="344.0" text="Employee Management System" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
          </AnchorPane>
       </center>
    </BorderPane>
