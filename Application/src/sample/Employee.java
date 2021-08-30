@@ -11,19 +11,19 @@ public class Employee  {
     static String employeeName;
     static String employeeBirthdate;
     static String employeeGender;
-    static String employerSIN;
+    static String employeeSIN;
     static String employeeStartDate;
     static String employeeEmailAddress;
     static int employeeID;
 
 
-    public Employee(String employerName, String employeeBirthdate, String employerGender, String employerSIN, String employerStartDate, String employerEmailAddress) {
-        Employee.employeeName = (employerName);
+    public Employee(String employeeName, String employeeBirthdate, String employeeGender, String employeeSIN, String employeeStartDate, String employeeEmailAddress) {
+        Employee.employeeName = (employeeName);
         Employee.employeeBirthdate = String.valueOf(employeeBirthdate);
-        Employee.employeeGender = (employerGender);
-        Employee.employerSIN = String.valueOf((employerSIN));
-        Employee.employeeStartDate = String.valueOf(employerStartDate);
-        Employee.employeeEmailAddress = String.valueOf(employerEmailAddress);
+        Employee.employeeGender = (employeeGender);
+        Employee.employeeSIN = String.valueOf((employeeSIN));
+        Employee.employeeStartDate = String.valueOf(employeeStartDate);
+        Employee.employeeEmailAddress = String.valueOf(employeeEmailAddress);
     }
 
     public Employee() {
@@ -50,7 +50,7 @@ public class Employee  {
         writer.write("\t\t\t\t\t Name: " + employeeName + "\r");
         writer.write("\t\t\t\t\t Gender: " + employeeGender + "\r");
         writer.write("\t\t\t\t\t Birthdate: " + employeeBirthdate + "\r");
-        writer.write("\t\t\t\t\t SIN Number: " + employerSIN + "\r");
+        writer.write("\t\t\t\t\t SIN Number: " + employeeSIN + "\r");
         writer.write("\t\t\t\t\t Employment Start Date: " + employeeStartDate + "\r");
         writer.write("\t\t\t\t\t Email Address: " + employeeEmailAddress + "\r");
         writer.write("\t\t\t\t\t Uniquely Generated Employee ID: " + getID() + "\r");
