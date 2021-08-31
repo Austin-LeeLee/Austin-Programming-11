@@ -1,0 +1,12 @@
+CONFUSED ABOUT WHICH BUTTON TO CLICK TO SAVE FRIEND
+INFO AND THEN LOAD IT TO A TEXT FILE?
+
+"Save Friend To List" button and "Load Friend To List" button
+each has a specific number which tells one what list to save
+what list and load to. If one happens to click on the
+"Save Friend To List(Specific list)" button, one must load friend
+to list by clicking on the "Load Friend To List(Exact number
+designated to load the saved data to)"
+
+Friends can only be saved one at a time
+and to a one of the list user desires.

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FriendsBook">
+   <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+      <Tab text=" Save Friend To List">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: #F9F9F9;">
+               <center>
+                  <AnchorPane blendMode="SRC_ATOP" prefHeight="354.0" prefWidth="595.0" style="-fx-background-color: #34495E;" BorderPane.alignment="CENTER">
+                     <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="354.0" prefWidth="94.0" style="-fx-background-image: #262620;">
+                        <ImageView fitHeight="372.0" fitWidth="109.0" layoutX="-15.0" layoutY="-18.0" pickOnBounds="true">
+                           <Image url="@../image/dark-gradient-blue (2).png" />
+                        </ImageView>
+                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="310.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="89.0" style="-fx-background-color: #262620;" text="Display Friend" textFill="WHITE">
+                           <font>
+                              <Font size="11.8" />
+                           </font>
+                        </Button>
+                        <Button fx:id="save" alignment="CENTER" contentDisplay="RIGHT" layoutY="282.0" mnemonicParsing="false" onAction="#saveBtn" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: #262620;" text="Save Friend" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                     </AnchorPane>
+                     <Label layoutX="186.0" layoutY="111.0" text="Friend Full Name" textFill="WHITE" />
+                     <Label layoutX="186.0" layoutY="178.0" text="Birthdate" textFill="WHITE" />
+                     <TextField fx:id="addName" layoutX="186.0" layoutY="129.0" prefHeight="26.0" prefWidth="322.0" promptText="First Name Last Name" style="-fx-background-color: #fffff;">
+                        <cursor>
+                           <Cursor fx:constant="DEFAULT" />
+                        </cursor>
+                     </TextField>
+                     <TextField fx:id="addBirthDate" layoutX="186.0" layoutY="194.0" prefHeight="26.0" prefWidth="134.0" promptText="DD/MM/YYYY" />
+                     <Label layoutX="377.0" layoutY="178.0" text="Gender" textFill="WHITE" />
+                     <Label fx:id="WrongInfo" alignment="CENTER" layoutX="184.0" layoutY="290.0" prefHeight="18.0" prefWidth="325.0" textFill="WHITE" />
+                     <Label layoutX="186.0" layoutY="233.0" text="Email" textFill="WHITE" />
+                     <TextField fx:id="AddEmailAddress" layoutX="186.0" layoutY="251.0" prefHeight="26.0" prefWidth="323.0" promptText="Enter Email Address" />
+                     <Label alignment="CENTER" layoutX="163.0" layoutY="39.0" prefHeight="42.0" prefWidth="344.0" text="Friends Book" textFill="WHITE">
+                        <font>
+                           <Font size="24.0" />
+                        </font>
+                     </Label>
+                     <TextField fx:id="addGender" layoutX="376.0" layoutY="194.0" prefHeight="26.0" prefWidth="134.0" promptText="Enter Gender" />
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </AnchorPane>
+      </Tab>
+      <Tab text="View Friend List">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: #F9F9F9;">
+                  <center>
+                     <AnchorPane blendMode="SRC_ATOP" prefHeight="354.0" prefWidth="595.0" style="-fx-background-color: #34495E;" BorderPane.alignment="CENTER">
+                        <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="354.0" prefWidth="94.0" style="-fx-background-image: #262620;">
+                           <ImageView fitHeight="372.0" fitWidth="109.0" layoutX="-15.0" layoutY="-18.0" pickOnBounds="true">
+                              <Image url="@../image/dark-gradient-blue (2).png" />
+                           </ImageView>
+                           <Button fx:id="friendListView" alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="310.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="89.0" style="-fx-background-color: #262620;" text="Display Friend" textFill="WHITE">
+                              <font>
+                                 <Font size="11.8" />
+                              </font>
+                           </Button>
+                           <Button fx:id="deleteFriend" alignment="CENTER" contentDisplay="RIGHT" layoutY="281.0" mnemonicParsing="false" onAction="#deleteBtn" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: #262620;" text="Delete Friend" textFill="WHITE" />
+                        </AnchorPane>
+                        <Label layoutX="117.0" layoutY="111.0" text="Friend Full Name" textFill="WHITE" />
+                        <Label layoutX="117.0" layoutY="178.0" text="Birthdate" textFill="WHITE" />
+                        <TextField fx:id="txtFieldName" editable="false" layoutX="117.0" layoutY="129.0" prefHeight="26.0" prefWidth="322.0" promptText="First Name Last Name" style="-fx-background-color: #fffff;">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </TextField>
+                        <TextField fx:id="txtFieldBirthdate" editable="false" layoutX="116.0" layoutY="194.0" prefHeight="26.0" prefWidth="134.0" promptText="DD/MM/YYYY" />
+                        <Label layoutX="304.0" layoutY="178.0" text="Gender" textFill="WHITE" />
+                        <Label alignment="CENTER" layoutX="116.0" layoutY="310.0" prefHeight="18.0" prefWidth="325.0" textFill="WHITE" />
+                        <Label layoutX="117.0" layoutY="233.0" text="Email" textFill="WHITE" />
+                        <TextField fx:id="txtFieldEmailAddress" editable="false" layoutX="117.0" layoutY="251.0" prefHeight="26.0" prefWidth="323.0" promptText="Enter Email Address" />
+                        <Label alignment="CENTER" layoutX="83.0" layoutY="39.0" prefHeight="42.0" prefWidth="344.0" text="Friends Book" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtFieldGender" editable="false" layoutX="304.0" layoutY="194.0" prefHeight="26.0" prefWidth="134.0" promptText="Enter Gender" />
+                        <ListView fx:id="ListView" layoutX="467.0" layoutY="14.0" onMouseClicked="#DisplayFriend" prefHeight="290.0" prefWidth="118.0" />
+                     </AnchorPane>
+                  </center>
+               </BorderPane>
+            </AnchorPane>
+         </AnchorPane>
+      </Tab>
+   </TabPane>
+</StackPane>
